@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link href="/webroot/css/bootstrap.css" rel="stylesheet">
+    <link href="/webroot/css/styleContact.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid contact">
+
+    <h1 class="text-center pt-4">Контактная форма</h1>
+    <?php use Library\Session;?>
+
+
+    <form method="post" class="text-center form">
+        <div class="alert small" style="font-size: 25px; color: #00b3ff;"><b><?=Session::getFlash()?></b></div>
+        <input class="name" placeholder="Введите имя" id='username' type="text" name="username" value="<?=$form->username?>"><br>
+        <input class="email mt-4" placeholder="Введите email" id='email' type="email" name="email" value="<?=$form->email?>"><br>
+        <textarea class="comment mt-4" placeholder="Введите комментарий"  id='message' name="message"><?=$form->message?></textarea><br>
+        <button class="btn btn-primary px-5 py-2 mt-3">Отправить</button>
+    </form>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

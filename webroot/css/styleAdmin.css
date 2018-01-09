@@ -1,0 +1,8 @@
+.admin{
+    background: url("/webroot/img/fonAdmin.jpg") no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+h1{
+    color: #960B50;
+}

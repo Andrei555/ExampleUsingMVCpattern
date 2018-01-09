@@ -1,0 +1,62 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'ralewayextrabold';
+    src: url('../font/raleway-extrabold-webfont.woff2') format('woff2'),
+    url('../font/raleway-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.container-fluid{
+    background: url("/webroot/img/fon_1.jpg") no-repeat;
+    background-size: cover;
+}
+.header{
+    background: url("/webroot/img/earth.jpg") no-repeat;
+    height: 100vh;
+    background-size: cover;
+    border: 1px solid #010E38;
+}
+.gallery{
+    background-color: #010E38;
+    border: 3px solid blue;
+    border-radius: 6px;
+    width: 308px;
+    box-shadow: 0 0 1.5em #fff;
+}
+.title_2{
+    color: blue;
+    font-size: 56px;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    font-family: 'ralewayextrabold', Arial, sans-serif;
+}
+.title_1{
+    color: #f7f7f7;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-family: 'ralewayextrabold', Arial, sans-serif;
+}
+.title_3{
+    color: #f7f7f7;
+    font-size: 20px;
+    padding-top: 100px;
+    font-family: 'ralewayextrabold', Arial, sans-serif;
+    margin-left: 300px;
+}
+.titleGallery{
+    background-color: #00b3ff;
+    width: 1140px;
+    margin-left: 75px;
+
+}
+.borderGallery{
+    border: 1px solid #fff;
+    margin-left: 75px;
+    width: 1140px;
+}

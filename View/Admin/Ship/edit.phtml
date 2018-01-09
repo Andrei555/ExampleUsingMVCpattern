@@ -1,0 +1,16 @@
+<b><?=\Library\Session::getFlash()?></b>
+<form action="" method="post" enctype="multipart/form-data">
+    Title: <input type="text" name="title" value="<?=$form->title?>"> <br>
+    Price: <input type="text" name="price" value="<?=$form->price?>"> <br>
+    Description:
+    <textarea name="description"><?=$form->description?></textarea> <br>
+    Style: <b>TODO</b> <br>
+    Active: <input type="checkbox" name="status" <?=$form->status ? 'checked' : '' ?>> <br>
+    <?php if ($image) : ?>
+        Current image: <img src="/uploads/<?=$image?>" alt=""> <br>
+    <?php else: ?>
+        No image available <br>
+    <?php endif;?>
+    Upload image: <input type="file" name="image"> <br>
+    <button>Go</button>
+</form>

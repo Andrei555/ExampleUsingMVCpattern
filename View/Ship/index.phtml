@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link href="/webroot/css/bootstrap.css" rel="stylesheet">
+    <link href="/webroot/css/styleBook.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+    <h1 class="text-center pt-5 pb-3">Описание кораблей</h1>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination my-5">
+            <?php foreach ($pagination->buttons as $button) :
+                if ($button->isActive) : ?>
+                    <li class="page-item"><a class="page-link" href="?page=<?=$button->page?>"><?=$button->text?></a></li>
+
+                <?php else : ?>
+                    <li class="page-item disabled"><a class="page-link" style="background-color: dodgerblue; color: #fff;" href="#"><?=$button->text?></a></li>
+                <?php endif;
+            endforeach; ?>
+        </ul>
+    </nav>
+
+    <div>
+
+    <table class="table table-striped table-primary w-50 ml-5 mb-4" align="right">
+
+        <?php foreach($ships as $ship) : ?>
+            <h2 class="mb-4"><?=$ship->getNameShip()?></h2>
+        <tr>
+            <td><b>Название</b></td>
+            <td>"<?=$ship->getNameShip()?>"</td>
+        </tr>
+        <tr>
+            <td><b>Длинна</b></td>
+            <td><?=$ship->getLong()?> м</td>
+        </tr>
+        <tr>
+            <td><b>Ширина</b></td>
+            <td><?=$ship->getWidth()?> м</td>
+        </tr>
+            <tr>
+                <td><b>Высота</b></td>
+                <td><?=$ship->getHeight()?> м</td>
+            </tr>
+            <tr>
+                <td><b>Водоизмищение</b></td>
+                <td><?=number_format($ship->getDisplacement(), 0, '', ' ')?> т</td>
+            </tr>
+            <tr>
+                <td><b>Спуск на воду</b></td>
+                <td><?=$ship->getLaunching()?></td>
+            </tr>
+            <tr>
+                <td><b>Вывод из эксплуатации</b></td>
+                <td><?=$ship->getRemovalFromService()?></td>
+            </tr>
+        <?php endforeach?>
+    </table>
+
+            <?=$ship->getDescription()?>
+        <div class="row">
+            <div class="col mb-5 mt-4">
+                <img src="/webroot/img/titanic2.jpg" width="520px" height="400">
+            </div>
+            <div class="col mb-5 mt-4">
+                <img src="/webroot/img/titanic3.jpg" width="520px" height="400">
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container">
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination my-5">
+            <?php foreach ($pagination->buttons as $button) :
+                if ($button->isActive) : ?>
+                    <li class="page-item"><a class="page-link" href="?page=<?=$button->page?>"><?=$button->text?></a></li>
+
+                <?php else : ?>
+                    <li class="page-item disabled"><a class="page-link" style="background-color: dodgerblue; color: #fff;" href="#"><?=$button->text?></a></li>
+                <?php endif;
+            endforeach; ?>
+        </ul>
+    </nav>
+
+    <div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/webroot/css/bootstrap.css" rel="stylesheet">
+    <link href="/webroot/css/styleLogin.css" rel="stylesheet">
+    <title>Логин</title>
+</head>
+<body>
+<div class="container-fluid login">
+    <h1 class="text-center pt-4">Залогинится</h1>
+    <?php use Library\Session;?>
+    <form method="post" class="formLogin text-center">
+        <div class="alert small" style="font-size: 25px; color: #00b3ff;"><b><?=Session::getFlash()?></b></div>
+        <input placeholder="Введите email" class="emailLogin" type="email" name="email" value="<?=$form->email?>"><br>
+        <input placeholder="Введите пароль" class="password mt-5" type="password" name="password"><br>
+        <button class="btn btn-primary px-5 py-3 mt-5">Отправить</button>
+    </form>
+</div>
+</body>
+</html>

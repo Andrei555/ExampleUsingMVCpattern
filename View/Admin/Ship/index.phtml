@@ -1,0 +1,40 @@
+<h1 class="text-center mb-5">Список кораблей</h1>
+
+<div class="alert alert-info"><?=\Library\Session::getFlash()?></div>
+
+<div class="table-responsive">
+    <table class="table" >
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Длина</th>
+            <th>Ширына</th>
+            <th>Высота</th>
+            <th>Водоизмищение</th>
+            <th>Спуск на воду</th>
+            <th>Вывод из эксплуатации</th>
+        </tr>
+
+        <?php foreach ($ships as $ship) : ?>
+            <tr>
+                <td><?=$ship->getId()?></td>
+                <td><?=$ship->getNameShip()?></td>
+                <td><?=$ship->getLong()?> м</td>
+                <td><?=$ship->getWidth()?> м</td>
+                <td><?=$ship->getHeight()?> м</td>
+                <td><?=number_format($ship->getDisplacement(), 0, '', ' ')?> т</td>
+                <td><?=$ship->getLaunching()?></td>
+                <td><?=$ship->getRemovalFromService()?></td>
+                <td>
+                    <a href="/admin/ships/edit/<?=$ship->getId()?>">Edit</a>
+                    <a href="/admin/ships/add/<?=$ship->getId()?>">Add</a>
+                    <a href="/admin/ships/remove/<?=$ship->getId()?>">Delete</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+
+    </table>
+</div>
+
+
+
