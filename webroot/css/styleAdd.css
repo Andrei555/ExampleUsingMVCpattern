@@ -1,0 +1,28 @@
+.fon{
+    background: url("/webroot/img/fonAdminAdd.jpg") no-repeat;
+    height: 700px;
+    background-size: cover;
+}
+input::-webkit-input-placeholder { color: #fff; }
+.row_input{
+    font-size: 20px;
+    border: 2px solid #fe8e1a;
+    height: 50px;
+    width: 400px;
+    background-color: #fe8e1a;
+}
+textarea::-webkit-input-placeholder { color: #fff; }
+.description{
+    font-size: 20px;
+    border: 2px solid #fe8e1a;
+    height: 100%;
+    width: 100%;
+    background-color: #fe8e1a;
+}
+h1{
+    color: #fff;
+}
+button{
+    color: #fff;
+    background-color: #F55A37;
+}

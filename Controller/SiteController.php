@@ -30,7 +30,6 @@ class SiteController extends Controller
                     ->setEmail($form->email)
                     ->setMessage($form->message)
                     ->setIpAddress($request->getIpAddress());
-
                 $repo->save($feedback);
                 Session::setFlash('Данные сохранены!');
                 $this->container->get('router')->redirect('/contact-us');

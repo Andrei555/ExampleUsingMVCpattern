@@ -73,4 +73,25 @@ class ShipRepository extends EntityRepository
         );
         $sth->execute($params);
     }
+
+    public function saveArticle($object)
+    {
+//        $class = explode('\\', get_class($object));
+//        var_dump($class);
+//        $class = end($class);
+
+        $sql = 'INSERT INTO all_ships (nameShip, displacement, description, removalFromService, launching, width, `long`, height) 
+                              VALUES (:nameShip, :displacement, :description, :removalFromService, :launching, :width, :long, :height)';
+        $sth = $this->pdo->prepare($sql);
+        $sth->execute(array(
+            'nameShip' => $object->getNameShip(),
+            'long' => $object->getLong(),
+            'height' => $object->getHeight(),
+            'width' => $object->getWidth(),
+            'displacement' => $object->getDisplacement(),
+            'launching' => $object->getLaunching(),
+            'removalFromService' => $object->getRemovalFromService(),
+            'description' => $object->getDescription(),
+        ));
+    }
 }

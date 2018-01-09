@@ -6,11 +6,11 @@ use Library\EntityRepository;
 
 class FeedbackRepository extends EntityRepository
 {
-    public function save($object, $table = null)
+    public function save($object)
     {
-        $class = explode('\\', get_class($object)); // Model\Feedback
-        $class = end($class);
-        $table = strtolower($class);
+//        $class = explode('\\', get_class($object)); // Model\Feedback
+//        $class = end($class);
+//        $table = strtolower($class);
 
         $sql = 'INSERT INTO feedback (name, email, message, ip_address) VALUES (:name, :email, :message, :ip_address)';
         $sth = $this->pdo->prepare($sql);
