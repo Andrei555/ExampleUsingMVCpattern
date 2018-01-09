@@ -35,4 +35,9 @@ class ShipController extends Controller
         Session::setFlash("Статтья №{$id} была удалена!");
         $this->container->get('router')->redirect('/admin/ships');
     }
+
+    public function addAction()
+    {
+        return $this->render('add.phtml');
+    }
 }

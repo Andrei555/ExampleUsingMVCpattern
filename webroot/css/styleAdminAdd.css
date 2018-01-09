@@ -1,0 +1,51 @@
+.fon{
+    background: url("/webroot/img/fonAdminAdd.jpg") no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+.form{
+
+    background-color: rgba(1,14,56, 0.5);
+    margin-top: 30px;
+    height: 450px;
+    width: 800px;
+    margin-left: 255px;
+    border-radius: 9px;
+}
+input::-webkit-input-placeholder { color: #fff; }
+.name{
+    font-size: 20px;
+    border: 2px solid #00CFF3;
+    height: 50px;
+    width: 400px;
+    background-color: #00CFF3;
+    border-radius: 7px;
+}
+.email{
+    font-size: 20px;
+    border: 2px solid #00CFF3;
+    height: 50px;
+    width: 400px;
+    background-color: #00CFF3;
+    border-radius: 7px;
+}
+textarea::-webkit-input-placeholder { color: #fff; }
+.comment{
+    font-size: 20px;
+    border: 2px solid #00CFF3;
+    height: 150px;
+    width: 400px;
+    background-color: #00CFF3;
+    border-radius: 7px;
+}
+h1{
+    color: #fff;
+}
+.msg{
+    font-size: 20px;
+    border: 2px solid #00CFF3;
+    height: 150px;
+    width: 400px;
+    background-color: #00CFF3;
+    border-radius: 7px;
+}

@@ -13,9 +13,9 @@ return array(
 
     // admin routes
     'admin_default' => new Route('/admin', 'Admin\\Default', 'index'),
+    'admin_add' => new Route('/admin/add', 'Admin\\Ship', 'add'),
     'admin_ships' => new Route('/admin/ships', 'Admin\\Ship', 'index'),
     'admin_ship_edit' => new Route('/admin/ships/edit/{id}', 'Admin\\Ship', 'index'),
-    'admin_ship_add' => new Route('/admin/ships/add/{id}', 'Admin\\Ship', 'index'),
     'admin_ships_list' => new Route('/admin/ships', 'Admin\\Ship', 'index'),
     'admin_ships_remove' => new Route('/admin/ships/remove/{id}', 'Admin\\Ship', 'remove', array('id' => '[0-9]+')),
     'admin_ships_edit' => new Route('/admin/ships/edit/{id}', 'Admin\\Ship', 'edit', array('id' => '[0-9]+')),
