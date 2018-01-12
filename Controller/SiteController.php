@@ -36,7 +36,7 @@ class SiteController extends Controller
             }
             Session::setFlash('Форма заполненна не коректно!');
     }
-
-        return $this->render('contact.phtml', ['form' => $form]);
+        $comments = $repo->showComments();
+        return $this->render('contact.phtml', ['form' => $form, 'comments' => $comments]);
     }
 }

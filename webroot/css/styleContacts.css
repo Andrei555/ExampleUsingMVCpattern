@@ -1,16 +1,12 @@
 .contact{
     background: url("/webroot/img/fonContact.png") no-repeat;
-    height: 100vh;
+    height: 1500px;
     background-size: cover;
 }
-.form{
-
-    background-color: rgba(1,14,56, 0.5);
-    margin-top: 30px;
-    height: 450px;
-    width: 800px;
-    margin-left: 255px;
-    border-radius: 9px;
+.container{
+    background-color: #00b3ff;
+    width: 950px;
+    height: 1500px;
 }
 input::-webkit-input-placeholder { color: #fff; }
 .name{
