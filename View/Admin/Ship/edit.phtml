@@ -1,16 +1,38 @@
-<b><?=\Library\Session::getFlash()?></b>
-<form action="" method="post" enctype="multipart/form-data">
-    Title: <input type="text" name="title" value="<?=$form->title?>"> <br>
-    Price: <input type="text" name="price" value="<?=$form->price?>"> <br>
-    Description:
-    <textarea name="description"><?=$form->description?></textarea> <br>
-    Style: <b>TODO</b> <br>
-    Active: <input type="checkbox" name="status" <?=$form->status ? 'checked' : '' ?>> <br>
-    <?php if ($image) : ?>
-        Current image: <img src="/uploads/<?=$image?>" alt=""> <br>
-    <?php else: ?>
-        No image available <br>
-    <?php endif;?>
-    Upload image: <input type="file" name="image"> <br>
-    <button>Go</button>
-</form>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link href="/webroot/css/bootstrap.css" rel="stylesheet">
+    <link href="/webroot/css/styleEdit.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid fon">
+
+    <h1 class="text-center py-4">Форма редактирования статьи</h1>
+    <?php use Library\Session;?>
+
+    <div class="alert small text-center" style="font-size: 25px; color: #31ff4a;"><b><?=Session::getFlash()?></b></div>
+    <form method="post" class="row">
+
+        <div class="col-4">
+            <input class="row_input mb-2 text-success" placeholder="Название" id='nameShip' type="text" name="nameShip" value="<?=$ship['nameShip']?>"><br>
+            <input class="row_input mb-2 text-success" placeholder="Длинна" id='longShip' type="text" name="longShip" value="<?=$ship['long']?>"><br>
+            <input class="row_input mb-2 text-success" placeholder="Ширина" id='widthShip' type="text" name="widthShip" value="<?=$ship['width']?>"><br>
+            <input class="row_input mb-2 text-success" placeholder="Высота" id='heightShip' type="text" name="heightShip" value="<?=$ship['height']?>"><br>
+            <input class="row_input mb-2 text-success" placeholder="Водоизмищение" id='displacement' type="text" name="displacement" value="<?=$ship['displacement']?>"><br>
+            <input class="row_input mb-2 text-success" placeholder="Спуск на воду" id='launching' type="text" name="launching" value="<?=$ship['launching']?>"><br>
+            <input class="row_input mb-2 text-success" placeholder="Вывод из эксплуатации" id='removalFromService' type="text" name="removalFromService" value="<?=$ship['removalFromService']?>">
+        </div>
+        <div class="col-8 pb-2 pl-0">
+            <textarea class="description text-success" placeholder="Описание корабля"  id='description' name="description"><?=$ship['description']?></textarea>
+        </div>
+        <div class="col text-center">
+            <button class="btn px-5 py-2 mt-3 mb-5">Отправить</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

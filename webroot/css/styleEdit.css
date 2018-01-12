@@ -1,0 +1,28 @@
+.fon{
+    background: url("/webroot/img/fonEditAdmin.jpg") no-repeat;
+    height: 700px;
+    background-size: cover;
+}
+input::-webkit-input-placeholder { color: #fff; }
+.row_input{
+    font-size: 20px;
+    border: 2px solid #31ff4a;
+    height: 50px;
+    width: 400px;
+    background-color: rgba(1,14,56, 0.5);
+}
+textarea::-webkit-input-placeholder { color: #fff; }
+.description{
+    font-size: 20px;
+    border: 2px solid #31ff4a;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(1,14,56, 0.5);
+}
+h1{
+    color: rgba(352,77,96, 0.5);;
+}
+button{
+    color: #fff;
+    background-color: rgba(352,77,96, 0.5);
+}

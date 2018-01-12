@@ -4,7 +4,7 @@ namespace Model\Form;
 
 use Library\Request;
 
-class AddForm
+class ShipForm
 {
     public $nameShip;
     public $longShip;

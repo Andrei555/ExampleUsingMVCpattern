@@ -4,6 +4,7 @@ namespace Model\Repository;
 
 use Library\EntityRepository;
 use Model\Ship;
+use Library\NotFoundException;
 
 class ShipRepository extends EntityRepository
 {
@@ -76,10 +77,6 @@ class ShipRepository extends EntityRepository
 
     public function saveArticle($object)
     {
-//        $class = explode('\\', get_class($object));
-//        var_dump($class);
-//        $class = end($class);
-
         $sql = 'INSERT INTO all_ships (nameShip, displacement, description, removalFromService, launching, width, `long`, height) 
                               VALUES (:nameShip, :displacement, :description, :removalFromService, :launching, :width, :long, :height)';
         $sth = $this->pdo->prepare($sql);
@@ -93,5 +90,43 @@ class ShipRepository extends EntityRepository
             'removalFromService' => $object->getRemovalFromService(),
             'description' => $object->getDescription(),
         ));
+    }
+
+    public function saveEditArticle($object)
+    {
+        $sql = ('UPDATE all_ships SET removalFromService = :removalFromService, nameShip = :nameShip, `long` = :long, height = :height,
+              width = :width, displacement = :displacement, launching = :launching, description = :description WHERE id = :id');
+
+        $sth = $this->pdo->prepare($sql);
+        $sth->execute(array(
+            'id' => $object->getId(),
+            'nameShip' => $object->getNameShip(),
+            'long' => $object->getLong(),
+            'height' => $object->getHeight(),
+            'width' => $object->getWidth(),
+            'displacement' => $object->getDisplacement(),
+            'launching' => $object->getLaunching(),
+            'removalFromService' => $object->getRemovalFromService(),
+            'description' => $object->getDescription(),
+        ));
+        //$sth = $db->prepare('UPDATE book SET title = :title, description = :description, price = :price, is_active = :status where id = :id');
+    }
+
+    public function findById($id)
+    {
+        $sth = $this->pdo->prepare('SELECT * FROM all_ships WHERE id = :ship_id');
+        $params = array(
+            'ship_id' => $id
+        );
+        $sth->execute($params);
+
+        $ship = $sth->fetch(\PDO::FETCH_ASSOC);
+
+
+        if (!$ship) {
+            throw new NotFoundException("Article #{$id} not found");
+        }
+
+        return $ship;
     }
 }
