@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Document</title>
     <link href="/webroot/css/bootstrap.css" rel="stylesheet">
-    <link href="/webroot/css/styleContacts.css" rel="stylesheet">
+    <link href="/webroot/css/styleContact.css" rel="stylesheet">
 </head>
 <body>
 <div class="container-fluid contact">
     <div class="container">
-        <h1 class="text-white pt-4">Контактная форма</h1>
+        <h1 class="text-white text-center pt-4">Контактная форма</h1>
         <?php use Library\Session;?>
         
-        <form method="post">
+        <form method="post" class="text-center">
             <div class="alert small" style="font-size: 25px; color: #100889;"><b><?=Session::getFlash()?></b></div>
             <input class="name text-white" placeholder="Введите имя" id='username' type="text" name="username" value="<?=$form->username?>"><br>
             <input class="email mt-4 text-white" placeholder="Введите email" id='email' type="email" name="email" value="<?=$form->email?>"><br>

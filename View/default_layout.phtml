@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Document</title>
     <link href="/webroot/css/bootstrap.css" rel="stylesheet">
-    <link href="/webroot/css/style.css" rel="stylesheet">
+    <link href="/webroot/css/styles.css" rel="stylesheet">
 </head>
 <body>
 <div class="container-fluid m-0 p-0" style="padding-top: 100px;">
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #234477;">
+        <img src="/webroot/img/logo.png" class="m-0 p-0" width="40">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -17,16 +18,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent" style="1000px">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a href="/" class="mx-3">Главная</a>
+                    <a href="/" class="mx-3 text-white">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/ships" class="mx-3">Статьи</a>
+                    <a href="/ships" class="mx-3 text-white">Статьи</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/contact-us" class="mx-3">Контакты</a>
+                    <a href="/contact-us" class="mx-3 text-white">Контакты</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/login" class="mx-3">Вход</a>
+                    <a href="/login" class="mx-3 text-white">Вход</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -40,9 +41,14 @@
 
 <?=$content?>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<div class="footer">
+    <img src="/webroot/img/logo.png" class="ml-4 mt-2" width="60">
+    <span class="text-primary ml-5"><b>Callback </b></span><span class="text-white"><b>(andrey1988@gmail.com)</b></span>
+    <a href="https://www.youtube.com" class="images" target="_blank"><img src="/webroot/img/youtube.png" class="mr-4 youtube" width="35"></a>
+    <a href="https://www.google.com" class="images" target="_blank"><img src="/webroot/img/Google.png" class="mr-4 mt-4" width="30"></a>
+    <a href="https://www.facebook.com" class="images" target="_blank"><img src="/webroot/img/facebook.png" class="mr-4 mt-4" width="30"></a>
+    <a href="https://www.instagram.com" class="images" target="_blank"><img src="/webroot/img/Instagram.png" class="mr-4 mt-4" width="30"></a>
+</div>
 
 </body>
 </html>

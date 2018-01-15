@@ -17,7 +17,7 @@ define('CONF_DIR', ROOT . 'Config' . DS);
 
 spl_autoload_register(function($className)
 {
-    $file = ROOT . str_replace('\\', DS, $className) . '.php';
+    $file = ROOT .  $className . '.php';
 
     if (!file_exists($file)) {
         throw new \Exception("{$file} not found", 500);

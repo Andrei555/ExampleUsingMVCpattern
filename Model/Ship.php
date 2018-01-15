@@ -15,6 +15,8 @@ class Ship
     private $width;
     private $height;
     private $displacement;
+    private $image_1;
+    private $image_2;
 
     public function getWidth()
     {
@@ -113,6 +115,28 @@ class Ship
     public function setRemovalFromService($removalFromService)
     {
         $this->removalFromService = $removalFromService;
+        return $this;
+    }
+
+    public function getImage_1()
+    {
+        return $this->image_1;
+    }
+
+    public function setImage_1($image_1)
+    {
+        $this->image_1 = $image_1;
+        return $this;
+    }
+
+    public function getImage_2()
+    {
+        return $this->image_2;
+    }
+
+    public function setImage_2($image_2)
+    {
+        $this->image_2 = $image_2;
         return $this;
     }
 }

@@ -11,7 +11,7 @@ class ShipRepository extends EntityRepository
     public function findActiveByPage($page, $perPage)
     {
         $offset = ($page - 1) * $perPage;
-        $sql = "SELECT id, nameShip, height, `long`, description, width, displacement, DATE_FORMAT(launching, '%d.%m.%Y')
+        $sql = "SELECT id, nameShip, height, `long`, image_1, image_2, description, width, displacement, DATE_FORMAT(launching, '%d.%m.%Y')
         as launching, DATE_FORMAT(removalFromService, '%d.%m.%Y') as removalFromService FROM all_ships ORDER BY id LIMIT {$offset}, {$perPage}";
         $sth = $this->pdo->query($sql);
         $ships = [];
@@ -26,6 +26,8 @@ class ShipRepository extends EntityRepository
                 ->setRemovalFromService($row['removalFromService'])
                 ->setDescription($row['description'])
                 ->setWidth($row['width'])
+                ->setImage_1($row['image_1'])
+                ->setImage_2($row['image_2'])
                 ->setHeight($row['height'])
                 ->setDisplacement($row['displacement']);
             $ships[] = $ship;

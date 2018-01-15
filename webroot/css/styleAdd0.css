@@ -3,21 +3,21 @@
     height: 700px;
     background-size: cover;
 }
-input::-webkit-input-placeholder { color: #fff; }
+input::-webkit-input-placeholder { color: #FFC108; }
 .row_input{
     font-size: 20px;
     border: 2px solid #fe8e1a;
     height: 50px;
     width: 400px;
-    background-color: #fe8e1a;
+    background-color: rgba(254,142,26, 0.4);
 }
-textarea::-webkit-input-placeholder { color: #fff; }
+textarea::-webkit-input-placeholder { color: #FFC108; }
 .description{
     font-size: 20px;
     border: 2px solid #fe8e1a;
     height: 100%;
     width: 100%;
-    background-color: #fe8e1a;
+    background-color: rgba(254,142,26, 0.4);
 }
 h1{
     color: #fff;

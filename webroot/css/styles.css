@@ -60,3 +60,14 @@ html, body {
     margin-left: 75px;
     width: 1140px;
 }
+.footer{
+    background-color: #234477;
+    height: 85px;
+}
+.images{
+    float: right;
+}
+.youtube{
+    margin-top: 28px;
+}
+
