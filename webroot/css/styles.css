@@ -17,7 +17,6 @@ html, body {
     background: url("/webroot/img/earth.jpg") no-repeat;
     height: 100vh;
     background-size: cover;
-    border: 1px solid #010E38;
 }
 .gallery{
     background-color: #010E38;
@@ -27,7 +26,6 @@ html, body {
     box-shadow: 0 0 1.5em #fff;
 }
 .title_2{
-    color: blue;
     font-size: 56px;
     display: flex;
     justify-content: center;
