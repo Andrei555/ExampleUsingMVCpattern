@@ -26,9 +26,9 @@ class SiteController extends Controller
         if ($request->isPost()){
             if ($form->isValid()) {
                 $feedback = (new Feedback())
-                    ->setName($form->username)
-                    ->setEmail($form->email)
-                    ->setMessage($form->message)
+                    ->setName($form->clean($form->username))
+                    ->setEmail($form->clean($form->email))
+                    ->setMessage($form->clean($form->message))
                     ->setIpAddress($request->getIpAddress());
                 $repo->save($feedback);
                 Session::setFlash('Данные сохранены!');

@@ -26,10 +26,11 @@ html, body {
     box-shadow: 0 0 1.5em #fff;
 }
 .title_2{
+    color: #00b3ff;
     font-size: 56px;
     display: flex;
     justify-content: center;
-    padding-top: 70px;
+    padding-top: 180px;
     font-family: 'ralewayextrabold', Arial, sans-serif;
 }
 .title_1{
